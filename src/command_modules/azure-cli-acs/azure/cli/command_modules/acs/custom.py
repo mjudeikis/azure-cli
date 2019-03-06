@@ -2468,7 +2468,7 @@ def openshift_create(cmd, client, resource_group_name, name,  # pylint: disable=
 
     agent_infra_pool_profile = OpenShiftManagedClusterAgentPoolProfile(
         name='infra',  # Must be 12 chars or less before ACS RP adds to it
-        count=int(2),
+        count=int(3),
         vm_size="Standard_D4s_v3",
         os_type="Linux",
         role=OpenShiftAgentPoolProfileRole.infra,
