@@ -111,6 +111,8 @@ def validate_subnet(key):
         parts = parse_resource_id(subnet)
 
         if parts['subscription'] != get_subscription_id(cmd.cli_ctx):
+            print(parts['subscription'])
+            print(get_subscription_id(cmd.cli_ctx))
             raise CLIError("--%s subscription '%s' must equal cluster subscription." %
                            (key.replace('_', '-'), parts["subscription"]))
 
